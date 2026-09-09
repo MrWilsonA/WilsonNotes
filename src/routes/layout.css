@@ -2,35 +2,23 @@
 
 /* ============================================
    WilsonNotes Design System
-   Monochromatic zinc/slate palette
+   3-Color Theme: Indigo + Dark Zinc + Light Slate
+   NO GRADIENTS — all flat solid colors
    ============================================ */
 
 @theme {
-  /* Brand Colors */
-  --color-brand-50: #f8fafc;
-  --color-brand-100: #f1f5f9;
-  --color-brand-200: #e2e8f0;
-  --color-brand-300: #cbd5e1;
-  --color-brand-400: #94a3b8;
-  --color-brand-500: #64748b;
-  --color-brand-600: #475569;
-  --color-brand-700: #334155;
-  --color-brand-800: #1e293b;
-  --color-brand-900: #0f172a;
-  --color-brand-950: #020617;
-
-  /* Accent — subtle blue-slate for interactive elements */
+  /* === Theme Color 1: Indigo (Accent) === */
   --color-accent-400: #818cf8;
   --color-accent-500: #6366f1;
   --color-accent-600: #4f46e5;
 
-  /* Surface colors for dark mode */
+  /* === Theme Color 2: Zinc Dark (Surfaces) === */
   --color-surface-primary: #09090b;
   --color-surface-secondary: #18181b;
   --color-surface-tertiary: #27272a;
   --color-surface-elevated: #1c1c20;
 
-  /* Text */
+  /* === Theme Color 3: Slate Light (Text) === */
   --color-text-primary: #fafafa;
   --color-text-secondary: #a1a1aa;
   --color-text-tertiary: #71717a;
@@ -49,8 +37,7 @@
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* Shadows */
-  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.08);
+  /* Shadows — no colored glows, just neutral shadows */
   --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
   --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.4), 0 8px 32px rgba(0, 0, 0, 0.3);
 }
@@ -100,17 +87,13 @@ body {
 }
 
 /* ============================================
-   Focus Styles
+   Focus & Selection
    ============================================ */
 
 :focus-visible {
   outline: 2px solid var(--color-accent-500);
   outline-offset: 2px;
 }
-
-/* ============================================
-   Selection
-   ============================================ */
 
 ::selection {
   background-color: var(--color-accent-500);
@@ -138,18 +121,7 @@ body {
 
 @keyframes pulse-subtle {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  50% { opacity: 0.5; }
 }
 
 .animate-fade-in {
@@ -158,17 +130,6 @@ body {
 
 .animate-fade-in-up {
   animation: fade-in-up 0.6s var(--ease-out-expo) both;
-}
-
-.animate-shimmer {
-  background: linear-gradient(
-    90deg,
-    var(--color-surface-secondary) 25%,
-    var(--color-surface-tertiary) 50%,
-    var(--color-surface-secondary) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
 }
 
 .stagger-1 { animation-delay: 0.05s; }

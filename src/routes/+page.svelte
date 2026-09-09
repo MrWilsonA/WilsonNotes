@@ -15,43 +15,37 @@
       href: '/music',
       label: 'Music Theory',
       description: 'Teori musik, notasi, dan harmonic analysis berbasis LaTeX.',
-      icon: Music,
-      color: '#ec4899'
+      icon: Music
     },
     {
       href: '/physics',
       label: 'Physics',
       description: 'Mekanika klasik, elektromagnetisme, dan fisika modern.',
-      icon: Atom,
-      color: '#3b82f6'
+      icon: Atom
     },
     {
       href: '/chemistry',
       label: 'Chemistry',
       description: 'Termodinamika, struktur molekul, dan kimia analitik.',
-      icon: FlaskConical,
-      color: '#10b981'
+      icon: FlaskConical
     },
     {
       href: '/cs',
       label: 'Computer Science',
       description: 'Catatan komprehensif CS tersinkronisasi dari Notion.',
-      icon: Monitor,
-      color: '#8b5cf6'
+      icon: Monitor
     },
     {
       href: '/music-language',
       label: 'Music Language',
       description: 'Bahasa musik, terminologi, dan interpretasi seni.',
-      icon: Languages,
-      color: '#f59e0b'
+      icon: Languages
     },
     {
       href: '/arts',
       label: 'Arts',
       description: 'Seni visual, estetika, dan sejarah kesenian.',
-      icon: Palette,
-      color: '#ef4444'
+      icon: Palette
     }
   ];
 </script>
@@ -69,7 +63,7 @@
     </div>
 
     <h1 class="hero-title">
-      <span class="title-line">Wilson</span><span class="title-accent">Notes</span>
+      Wilson<span class="title-accent">Notes</span>
     </h1>
 
     <p class="hero-subtitle">
@@ -107,7 +101,6 @@
           label={subject.label}
           description={subject.description}
           icon={subject.icon}
-          color={subject.color}
           index={i}
         />
       {/each}
@@ -151,7 +144,8 @@
 <style>
   .homepage {
     padding: 2rem 2rem 0;
-    max-width: 900px;
+    max-width: 960px;
+    margin: 0 auto;
   }
 
   /* Hero */
@@ -187,17 +181,11 @@
     letter-spacing: -0.04em;
     line-height: 1.1;
     margin: 0 0 1rem;
-  }
-
-  .title-line {
     color: var(--color-text-primary);
   }
 
   .title-accent {
-    background: linear-gradient(135deg, var(--color-accent-400), var(--color-accent-600));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-accent-500);
   }
 
   .hero-subtitle {
@@ -266,7 +254,7 @@
 
   .subjects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 0.75rem;
   }
 
@@ -279,7 +267,7 @@
 
   .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 0.5rem;
     margin-top: 1rem;
   }
@@ -311,10 +299,6 @@
   @media (max-width: 768px) {
     .homepage {
       padding: 1.5rem 1.25rem 0;
-    }
-
-    .hero {
-      padding-top: 4rem;
     }
 
     .subjects-grid {

@@ -42,7 +42,8 @@
 <style>
   .page-container {
     padding: 2rem 2rem 0;
-    max-width: 900px;
+    max-width: 960px;
+    margin: 0 auto;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -50,7 +51,7 @@
 
   @media (max-width: 768px) {
     .page-container {
-      padding: 5rem 1.25rem 0;
+      padding: 1.5rem 1.25rem 0;
     }
   }
 </style>

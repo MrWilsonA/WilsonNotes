@@ -4,7 +4,7 @@
 <footer class="site-footer">
   <div class="footer-content">
     <div class="footer-brand">
-      <span class="footer-logo">W</span>
+      <img src="/logo.jpg" alt="WilsonNotes" class="footer-logo" />
       <span class="footer-text">WilsonNotes</span>
     </div>
 
@@ -38,7 +38,7 @@
   }
 
   .footer-content {
-    max-width: 680px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
@@ -55,17 +55,10 @@
   }
 
   .footer-logo {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--color-accent-500), var(--color-accent-600));
-    border-radius: 6px;
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 0.75rem;
-    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    object-fit: cover;
   }
 
   .footer-text {
